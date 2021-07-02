@@ -48,8 +48,6 @@ def shuangpin(pinyin,style='XIAOHE',tone=False):
 		t = ''
 	return s + y + t
 
-# def quanpin(shuangpin,style='XIAOHE'):
-
 
 def encode(hans,style='XIAOHE',tone=False):
 	""" 将汉字转换为双拼编码.
@@ -65,5 +63,3 @@ def encode(hans,style='XIAOHE',tone=False):
 	"""
 	return str.upper(''.join(shuangpin(x,style=style,tone=tone) \
 		for x in lazy_pinyin(hans,style=Style.TONE3, neutral_tone_with_five=True)))
-
-print(encode('大家好我是李小锐'))
